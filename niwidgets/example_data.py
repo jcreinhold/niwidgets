@@ -10,7 +10,7 @@ __all__ = [
 
 from pathlib import Path
 
-root_dir = Path(__file__).resolve / "data"
+root_dir = Path(__file__).resolve() / "data"
 
 example_atlas = root_dir / "cc400_roi_atlas.nii"
 example_zmap = root_dir / "cognitive control_pFgA_z.nii.gz"
