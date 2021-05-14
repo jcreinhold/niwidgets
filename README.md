@@ -1,5 +1,8 @@
 # Neuroimaging Widgets (`niwidgets`)
 
+**Note that this is a fork of [niwidgets](https://github.com/nipy/niwidgets) made to fix some install issues**
+**Install this version via: pip install git+git://github.com/jcreinhold/niwidgets**
+
 This repository is supposed to provide easy and general wrappers to display
 interactive widgets that visualise standard-format neuroimaging data, using new
 functions and standard functions from other libraries. It looks like this:
@@ -132,4 +135,4 @@ Soergel](http://www.ast.cam.ac.uk/~bs538/), [Satrajit
 Ghosh](https://github.com/satra), [Melanie
 Ganz](https://github.com/melanieganz), [Murat
 Bilgel](https://github.com/bilgelm), [Ariel Rokem](https://github.com/arokem),
-and [elyb01](https://github.com/elyb01)._
+and [elyb01](https://github.com/elyb01), [Jacob Reinhold](https://www.jcreinhold.com)._

@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import os
 
 import ipyvolume as ipv
@@ -133,10 +131,10 @@ class StreamlineWidget:
                 2,
             )[1:-1]
             indices[
-                line_offset : line_offset + line_length * 2 - 2
+            line_offset: line_offset + line_length * 2 - 2
             ] = line_indices
             line_pointers.append([line_offset, line_length, line_indices])
-            colors[vertex_offset : vertex_offset + line_length] = local_colors[
+            colors[vertex_offset: vertex_offset + line_length] = local_colors[
                 idx
             ]
             line_offset += line_length * 2 - 2
@@ -229,7 +227,7 @@ class StreamlineWidget:
                         line_indices,
                     ) = self.line_pointers[idx]
                     copy[
-                        line_offset : line_offset + line_length * 2 - 2
+                    line_offset: line_offset + line_length * 2 - 2
                     ] = line_indices
                 mesh.lines = copy
                 mesh.send_state("lines")
@@ -245,7 +243,7 @@ class StreamlineWidget:
                         line_length,
                         line_indices,
                     ) = self.line_pointers[idx]
-                    copy[line_offset : line_offset + line_length * 2 - 2] = 0
+                    copy[line_offset: line_offset + line_length * 2 - 2] = 0
                 mesh.lines = copy
                 mesh.send_state("lines")
             state["indices"] = np.where(self.lengths > threshold)[0]

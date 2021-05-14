@@ -1,12 +1,9 @@
 import ipywidgets
 
-# from matplotlib import pyplot as plt
-
 
 def get_cmap_dropdown(colormap):
     # set default colormap options & add them to the kwargs
     if colormap is None:
-        # options = (sorted(m for m in plt.cm.datad if not m.endswith("_r")))
         options = [
             "viridis",
             "summer",
@@ -33,5 +30,5 @@ def get_cmap_dropdown(colormap):
         return ipywidgets.fixed(colormap)
     else:
         raise ValueError(
-            "The colormap must be either a valid string, a list, " "or None."
+            "The colormap must be either a valid string, a list, or None."
         )

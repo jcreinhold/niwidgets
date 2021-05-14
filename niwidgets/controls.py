@@ -25,7 +25,6 @@ class PlaySlider(widgets.HBox):
         continuous_update=True,
         **kwargs
     ):
-
         # initialise the hbox widget
         super().__init__(
             [

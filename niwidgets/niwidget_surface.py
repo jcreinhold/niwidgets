@@ -1,6 +1,4 @@
 """A widget for surface-warped neuroimaging data."""
-from __future__ import print_function
-
 import os
 from collections import defaultdict
 from xml.parsers.expat import ExpatError
@@ -12,7 +10,7 @@ import numpy as np
 from IPython.display import display
 from ipywidgets import Dropdown, fixed, interact
 
-from .colormaps import get_cmap_dropdown
+from niwidgets.colormaps import get_cmap_dropdown
 
 
 def _check_file(file):

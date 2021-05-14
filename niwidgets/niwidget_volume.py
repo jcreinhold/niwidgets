@@ -11,8 +11,8 @@ import traitlets
 from IPython import display
 from ipywidgets import IntSlider, fixed, interact
 
-from .colormaps import get_cmap_dropdown
-from .controls import PlaySlider
+from niwidgets.colormaps import get_cmap_dropdown
+from niwidgets.controls import PlaySlider
 
 
 class NiftiWidget:
@@ -218,7 +218,6 @@ class NiftiWidget:
         self.fig, axes = plt.subplots(1, 3, figsize=figsize)
 
         for ii, ax in enumerate(axes):
-
             ax.set_facecolor("black")
 
             ax.tick_params(
@@ -239,7 +238,6 @@ class NiftiWidget:
             ax.set_ylim(0, axis_limits[1])
 
             img = np.zeros(axis_limits[::-1])
-            # img[1] = data_max
             im = ax.imshow(
                 img, cmap=colormap, vmin=data.min(), vmax=data.max()
             )
@@ -248,7 +246,6 @@ class NiftiWidget:
             ax.axhline(y=0, color="gray", alpha=0.8)
             # append to image handles
             self.image_handles.append(im)
-        # plt.show()
 
     def _custom_plotter(self, plotting_func, **kwargs):
         """Collect data and start interactive widget for custom plot."""
@@ -462,7 +459,7 @@ class VolumeWidget(traitlets.HasTraits):
                         for idim in range(3)
                     )
                     + (self.t,)
-                ]
+                    ]
             )
             if image is not None:
                 image.set_data(image_data)
